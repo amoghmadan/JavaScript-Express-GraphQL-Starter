@@ -1,5 +1,13 @@
 {
-    "port": 4000,
-    "mongoUri": "mongodb://127.0.0.1:27017/development",
-    "graphiql": true
+    "port": 8080,
+    "graphiql": true,
+    "mongo": {
+        "uri": "mongodb://127.0.0.1:27017/development",
+        "options": {
+            "useCreateIndex": true,
+            "useFindAndModify": true,
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    }
 }

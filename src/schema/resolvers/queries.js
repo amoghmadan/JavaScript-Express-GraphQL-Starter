@@ -1,8 +1,8 @@
-import { PersonModel } from '../../models/person';
+import { PersonModel } from "../../models";
 
 const queries = {
     hello: async () => {
-        return 'World!';
+        return "World!";
     },
     people: async () => {
         return await PersonModel.find();

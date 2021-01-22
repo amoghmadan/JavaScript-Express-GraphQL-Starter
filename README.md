@@ -16,19 +16,20 @@ Kick-starter to your GraphQL application.
     ├── package-lock.json
     ├── README.md
     ├── resources
-    │   ├── development.json
-    │   └── production.json
+    │   ├── development.json
+    │   └── production.json
     └── src
         ├── App.js
         ├── index.js
         ├── models
-        │   └── person.js
+        │   ├── index.js
+        │   └── person.model.js
         └── schema
             ├── index.js
             ├── resolvers
-            │   ├── index.js
-            │   ├── mutations.js
-            │   └── queries.js
+            │   ├── index.js
+            │   ├── mutations.js
+            │   └── queries.js
             └── typeDefs.js
 
 ## Deploy

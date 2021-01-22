@@ -1,4 +1,4 @@
-import { PersonModel } from '../../models/person';
+import { PersonModel } from "../../models";
 
 const mutations = {
     createPerson: async (args) => {
