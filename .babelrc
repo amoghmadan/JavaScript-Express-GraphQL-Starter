@@ -1,4 +1,15 @@
 {
-    "presets": ["@babel/preset-env"],
-    "plugins": ["@babel/plugin-transform-runtime"]
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@": "./src"
+        }
+      }
+    ]
+  ],
+  "presets": ["@babel/preset-env"]
 }

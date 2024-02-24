@@ -1,14 +1,16 @@
 {
   "name": "javascript-express-graphql-starter",
   "version": "1.0.0",
+  "private": true,
   "description": "JavaScript Express GraphQL Starter",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "lint": "eslint",
-    "serve": "nodemon --exec babel-node src/index.js",
     "build": "babel src --out-dir dist",
-    "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js",
+    "lint:check": "eslint src tests",
+    "lint:format": "eslint --fix src tests",
+    "start": "node dist/app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,29 +22,38 @@
     "GraphQL",
     "Starter"
   ],
-  "author": "Amogh Madan",
-  "license": "MIT",
+  "author": "Amogh Madan <amoghmadaan@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/amoghmadan/JavaScript-Express-GraphQL-Starter/issues"
   },
   "homepage": "https://github.com/amoghmadan/JavaScript-Express-GraphQL-Starter#readme",
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "eslint": "^7.18.0",
-    "nodemon": "^2.0.7"
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-transform-runtime": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
-    "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.4.0",
-    "helmet": "^4.4.1",
-    "mongoose": "^5.11.13",
-    "morgan": "^1.10.0"
+    "@babel/runtime": "^7.23.9",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "graphql-http": "^1.22.0",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "helmet": "^7.1.0",
+    "joi": "^17.12.2",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0",
+    "read": "^3.0.1",
+    "yargs": "^17.7.2"
   }
 }
