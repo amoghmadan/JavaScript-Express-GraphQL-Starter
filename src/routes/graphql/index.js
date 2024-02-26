@@ -12,8 +12,8 @@ const GRAPHQL_PATH = '/';
 const graphqlRouter = Router();
 if (GRAPHIQL) {
   graphqlRouter
-    .route(GRAPHQL_PATH)
-    .get(playground({endpoint: GRAPHQL_ROOT + GRAPHQL_PATH}));
+      .route(GRAPHQL_PATH)
+      .get(playground({endpoint: GRAPHQL_ROOT + GRAPHQL_PATH}));
 }
 graphqlRouter.route(GRAPHQL_PATH).post(authenticate, graphql);
 
