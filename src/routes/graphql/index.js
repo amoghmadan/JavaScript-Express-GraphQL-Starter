@@ -5,13 +5,16 @@ import graphql from './schema';
 import {authenticate} from '@/middlewares';
 import {GRAPHIQL} from '@/settings';
 
-export const GRAPHQL_PATH = '/graphql';
+export const GRAPHQL_ROOT = '/graphql';
+const GRAPHQL_PATH = '/';
 
 // eslint-disable-next-line new-cap
 const graphqlRouter = Router();
 if (GRAPHIQL) {
-  graphqlRouter.route('/').get(playground({endpoint: `${GRAPHQL_PATH}/`}));
+  graphqlRouter
+    .route(GRAPHQL_PATH)
+    .get(playground({endpoint: GRAPHQL_ROOT + GRAPHQL_PATH}));
 }
-graphqlRouter.route('/').post(authenticate, graphql);
+graphqlRouter.route(GRAPHQL_PATH).post(authenticate, graphql);
 
 export default graphqlRouter;
