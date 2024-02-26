@@ -1,6 +1,6 @@
 {
   "name": "javascript-express-graphql-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "JavaScript Express GraphQL Starter",
   "main": "dist/app.js",
@@ -47,6 +47,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
+    "graphql": "^16.8.1",
     "graphql-http": "^1.22.0",
     "graphql-playground-middleware-express": "^1.7.23",
     "helmet": "^7.1.0",
